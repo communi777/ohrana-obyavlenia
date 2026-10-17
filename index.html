@@ -89,10 +89,14 @@ footer{text-align:center;color:#718078;font-size:12px;padding:20px}
 <footer>Охрана · Вакансии и объявления</footer>
  document.getElementById("showJobForm").addEventListener("click", function() {
   document.getElementById("jobForm").classList.remove("hidden");
-}); document.getElementById("jobForm").addEventListener("submit", function(event) {
+  this.classList.add("hidden");
+});
+
+document.getElementById("jobForm").addEventListener("submit", function(event) {
   event.preventDefault();
   document.getElementById("paymentModal").classList.remove("hidden");
 });
+
 document.getElementById("closeModal").addEventListener("click", function() {
   document.getElementById("paymentModal").classList.add("hidden");
 });
@@ -100,4 +104,4 @@ document.getElementById("closeModal").addEventListener("click", function() {
 </body>
 </html>
 
-<script>
+
