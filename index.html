@@ -42,14 +42,13 @@ footer{text-align:center;color:#718078;font-size:12px;padding:20px}
 
   <section class="card">
     <h2>📝 Разместить объявление</h2>
-    <p>Заполните информацию о вакансии. После заполнения появятся условия размещения.</p>
-    <form id="jobForm">
+    <p>Заполните информацию о вакансии. После заполнения появятся условия размещения.</p><button type="button" id="showJobForm">📝 Заполнить объявление</button>
+    <form id="jobForm" class="hidden">
       <label>Название организации или работодателя
         <input name="employer" required>
       </label>
       <label>Должность
-        <input name="job" required placeholder="Например, охранник">
-      </label>
+        <input name="job" required placeholder="Например, охранник">      </label>
       <label>Город
         <input name="city" required>
       </label>
@@ -88,7 +87,9 @@ footer{text-align:center;color:#718078;font-size:12px;padding:20px}
 </div>
 
 <footer>Охрана · Вакансии и объявления</footer>
-  document.getElementById("jobForm").addEventListener("submit", function(event) {
+ document.getElementById("showJobForm").addEventListener("click", function() {
+  document.getElementById("jobForm").classList.remove("hidden");
+}); document.getElementById("jobForm").addEventListener("submit", function(event) {
   event.preventDefault();
   document.getElementById("paymentModal").classList.remove("hidden");
 });
