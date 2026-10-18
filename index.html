@@ -1,70 +1,190 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#5324d9">
-<title>Охрана — вакансии и объявления</title>
+<meta name="theme-color" content="#3824e8">
+<title>Охрана — вакансии и объявления MAX</title>
+
 <style>
 *{box-sizing:border-box}
-:root{--purple:#6328ee;--blue:#3978f5;--dark:#17143c;--muted:#625e7e;--light:#f4f1ff}
-body{margin:0;background:var(--light);color:var(--dark);font-family:Arial,sans-serif}
-.topbar{height:62px;padding:8px 15px;background:linear-gradient(100deg,#211078,#7035ed);color:#fff;display:flex;align-items:center;gap:10px}
-.shield{height:42px;width:42px;border:2px solid #cdb8ff;border-radius:50%;display:grid;place-items:center;font-size:24px;flex-shrink:0}
-.brand{font-size:17px;font-weight:bold}.botsub{font-size:12px;color:#e1d5ff;margin-top:3px}
-.max-wordmark{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:23px;font-weight:800;white-space:nowrap}
-.max-mark{width:30px;height:30px;border-radius:50% 50% 50% 12%;background:#fff;display:grid;place-items:center;color:#6533e9;font-size:18px;font-weight:bold}
-.hero{position:relative;isolation:isolate;overflow:hidden;margin:10px auto 12px;max-width:760px;min-height:245px;border-radius:22px;padding:26px 22px;background:linear-gradient(105deg,#f0eaff 0%,#faf8ff 58%,#ded1ff 100%)}
-.hero h1{font-size:clamp(32px,7vw,52px);margin:0 0 8px;position:relative;z-index:2;letter-spacing:-1px}
-.hero p{font-size:clamp(16px,3.5vw,22px);line-height:1.3;max-width:55%;margin:0;position:relative;z-index:2}
-.guard-photo{position:absolute;right:0;bottom:0;width:43%;height:100%;object-fit:cover;object-position:center top;z-index:0;mask-image:linear-gradient(90deg,transparent 0%,black 24%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 24%)}
-.features{display:flex;gap:7px;margin-top:20px;position:relative;z-index:2;max-width:57%}
-.feature{font-size:10px;line-height:1.2;display:flex;align-items:center;gap:5px;flex:1;min-width:0}
-.feature b{font-size:17px;background:#e4d9ff;border-radius:10px;padding:7px;flex-shrink:0}
-main{padding:0 12px 12px;max-width:760px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.card{background:#fff;border-radius:24px;padding:12px 10px 10px;min-width:0;display:flex;flex-direction:column;box-shadow:0 7px 22px #3e20a00c}
-.art{height:82px;border-radius:17px;background:linear-gradient(135deg,#eee6ff,#fbfaff);display:grid;place-items:center;font-size:46px;margin-bottom:12px}
-.card h2{font-size:clamp(17px,4vw,23px);line-height:1.15;margin:0 0 8px}
-.desc{font-size:clamp(13px,3vw,16px);line-height:1.35;color:var(--muted);margin:0 0 14px;flex:1}
-.btn{display:block;text-align:center;text-decoration:none;color:#fff;font-weight:bold;font-size:14px;padding:14px 7px;border-radius:13px;background:linear-gradient(100deg,#7737f5,#5124d8)}
-.bottom-banner{margin:0 auto 10px;max-width:736px;padding:14px;border-radius:20px;background:linear-gradient(110deg,#6240f0,#438bff);color:#fff;display:flex;align-items:center;gap:12px}
-.max-logo-bottom{width:66px;height:54px;border-radius:14px;background:#fff;color:#6230e8;display:grid;place-items:center;flex-shrink:0}
-.max-logo-bottom .max-mark{width:36px;height:36px;background:#6230e8;color:white;font-size:22px}
-.bottom-banner strong{font-size:16px;line-height:1.25}.bottom-banner p{font-size:12px;line-height:1.3;margin:5px 0 0;color:#eee8ff}
-footer{text-align:center;font-size:12px;color:#8882a7;padding:10px 10px 20px}
-@media(min-width:600px){.hero,main,.bottom-banner{max-width:760px}.hero{border-radius:24px}.card{padding:16px}.art{height:105px}.btn{font-size:15px}}
-@media(max-width:380px){.hero{padding:22px 16px;min-height:235px}.hero h1,.hero p{max-width:58%}.hero p{font-size:16px}.guard-photo{width:42%;object-position:55% top}.features{max-width:59%;gap:4px;margin-top:16px}.feature{font-size:9px;align-items:flex-start}.feature b{font-size:14px;padding:5px}.card{padding:9px}.art{height:72px}.desc{font-size:13px}.btn{font-size:12px;padding:13px 4px}.max-wordmark{font-size:19px}}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#111333;
+  background:#f3f4ff;
+}
+.wrap{max-width:1500px;margin:auto;padding:18px}
+.top,.bottom{
+  background:linear-gradient(110deg,#3015b9,#4235ff 65%,#168df7);
+  color:white;border-radius:24px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 30px;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:20px}
+.avatar{
+  width:82px;height:82px;border-radius:50%;
+  background:#fff;display:grid;place-items:center;
+  font-size:45px;flex-shrink:0;
+}
+.brand h2{font-size:34px;margin:0 0 6px}
+.brand p{font-size:21px;margin:0}
+.maxlogo{font-size:48px;font-weight:800;white-space:nowrap}
+.maxlogo span{display:inline-grid;place-items:center;
+  background:white;color:#4930ed;border-radius:50%;
+  width:65px;height:65px;margin-right:8px}
+.hero{
+  margin-top:12px;min-height:350px;border-radius:28px;
+  overflow:hidden;display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;
+  background:linear-gradient(90deg,#f2f3ff 0%,#e9edff 55%,#b7d5ff 100%);
+}
+.hero-text{padding:35px 40px}
+.hero h1{font-size:clamp(42px,6vw,82px);margin:0 0 12px;letter-spacing:-2px}
+.hero p{font-size:clamp(19px,2.5vw,35px);line-height:1.25;margin:0}
+.features{display:flex;gap:12px;margin-top:25px;flex-wrap:wrap}
+.feature{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600}
+.feature b{background:#dedbff;color:#3824e8;border-radius:15px;
+  width:55px;height:55px;display:grid;place-items:center;font-size:27px}
+.hero-img{height:350px;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 10px}
+.card{
+  background:white;border-radius:25px;padding:18px 22px;
+  display:grid;grid-template-columns:165px 1fr;
+  grid-template-rows:1fr auto;gap:10px 22px;
+  align-items:center;box-shadow:0 8px 25px #3020800d;
+  min-width:0;
+}
+.pic{
+  grid-row:1;grid-column:1;
+  height:105px;border-radius:20px;
+  background:#eeebff;display:grid;place-items:center;font-size:62px;
+}
+.info{grid-row:1;grid-column:2}
+.info h2{font-size:clamp(19px,2vw,27px);margin:0 0 7px}
+.info p{font-size:18px;line-height:1.3;color:#666784;margin:0}
+.btn{
+  grid-column:1/-1;display:block;text-align:center;
+  text-decoration:none;color:white;font-size:19px;font-weight:bold;
+  background:linear-gradient(100deg,#4535ff,#3920eb);
+  padding:13px 12px;border-radius:16px;
+  transition:filter .2s;
+}
+.btn:hover{filter:brightness(1.12)}
+.bottom{margin-top:12px;justify-content:flex-start;padding:18px 35px}
+.bottom .maxlogo{border-right:2px solid #ffffff99;padding-right:25px}
+.bottom-text strong{font-size:25px}
+.bottom-text p{font-size:19px;margin:6px 0 0}
+footer{text-align:center;color:#777;padding:18px;font-size:14px}
+@media(max-width:650px){
+ .wrap{padding:10px}
+ .top{padding:12px 14px;border-radius:17px}
+ .brand{gap:10px}.avatar{width:48px;height:48px;font-size:28px}
+ .brand h2{font-size:22px}.brand p{font-size:12px}
+ .maxlogo{font-size:25px}.maxlogo span{width:38px;height:38px;font-size:23px;margin-right:3px}
+ .hero{grid-template-columns:1fr;min-height:0}
+ .hero-text{padding:22px 20px 15px}
+ .hero h1{font-size:42px}
+ .hero p{font-size:21px}
+ .features{gap:10px;margin-top:18px}
+ .feature{font-size:11px;gap:5px}
+ .feature b{width:36px;height:36px;font-size:19px;border-radius:10px}
+ .hero-img{height:210px}
+ .grid{gap:10px;margin:12px 0}
+ .card{padding:11px;border-radius:18px;grid-template-columns:1fr;gap:9px}
+ .pic{grid-row:auto;grid-column:auto;height:90px;font-size:48px}
+ .info{grid-row:auto;grid-column:auto}
+ .info h2{font-size:17px;line-height:1.2}
+ .info p{font-size:14px}
+ .btn{font-size:13px;padding:11px 5px;border-radius:12px}
+ .bottom{padding:13px;gap:12px;border-radius:17px}
+ .bottom .maxlogo{font-size:22px;padding-right:10px}
+ .bottom .maxlogo span{width:32px;height:32px}
+ .bottom-text strong{font-size:15px}
+ .bottom-text p{font-size:12px;line-height:1.4}
+}
 </style>
 </head>
+
 <body>
-<header class="topbar">
-  <div class="shield">🛡️</div>
-  <div><div class="brand">Охрана</div><div class="botsub">Бот · Вакансии и объявления</div></div>
-  <div class="max-wordmark"><span class="max-mark">●</span> MAX</div>
+<div class="wrap">
+
+<header class="top">
+  <div class="brand">
+    <div class="avatar">🛡️</div>
+    <div>
+      <h2>Охрана</h2>
+      <p>Бот · Вакансии и объявления</p>
+    </div>
+  </div>
+  <div class="maxlogo"><span>●</span>MAX</div>
 </header>
 
 <section class="hero">
-  <img class="guard-photo" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85" alt="Специалист охраны">
-  <h1>Охрана</h1>
-  <p>Вакансии и объявления для специалистов охраны</p>
-  <div class="features">
-    <div class="feature"><b>💼</b><span>Актуальные вакансии</span></div>
-    <div class="feature"><b>👥</b><span>Работа и общение</span></div>
-    <div class="feature"><b>🛡️</b><span>Надёжная информация</span></div>
+  <div class="hero-text">
+    <h1>Охрана</h1>
+    <p>Вакансии и объявления<br>для специалистов охраны</p>
+    <div class="features">
+      <div class="feature"><b>💼</b>Актуальные<br>вакансии</div>
+      <div class="feature"><b>👥</b>Работа и<br>общение</div>
+      <div class="feature"><b>▤</b>Надёжная<br>информация</div>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=85"
+         alt="Специалист охраны">
   </div>
 </section>
 
-<main>
-  <section class="card"><div class="art">🔔</div><h2>Новые вакансии</h2><p class="desc">Свежие предложения работы в сфере охраны.</p><a class="btn" href="https://max.ru/okhranaaa">Перейти к вакансиям →</a></section>
-  <section class="card"><div class="art">📝</div><h2>Разместить объявление</h2><p class="desc">Заполните информацию о вакансии и ознакомьтесь с условиями.</p><a class="btn" href="https://max.ru/okhranaaa">Заполнить объявление →</a></section>
-  <section class="card"><div class="art">💬</div><h2>Чат Охраны</h2><p class="desc">Общение, вопросы и актуальная информация.</p><a class="btn" href="https://max.ru/join/emKU42X8JSddfjDshkXL4VVNhcUz12JL2IsI6R8QtNE">Перейти в чат →</a></section>
-  <section class="card"><div class="art">📣</div><h2>Канал MAX</h2><p class="desc">Охрана Вакансии — объявления и предложения работы.</p><a class="btn" href="https://max.ru/oxranamosk">Перейти в канал →</a></section>
-</main>
+<section class="grid">
+  <article class="card">
+    <div class="pic">🔔</div>
+    <div class="info">
+      <h2>Новые вакансии</h2>
+      <p>Свежие предложения работы в сфере охраны.</p>
+    </div>
+    <a class="btn" href="https://max.ru/okhranaaa">Перейти к вакансиям →</a>
+  </article>
 
-<section class="bottom-banner">
-  <div class="max-logo-bottom"><span class="max-mark">●</span></div>
-  <div><strong>Профессиональное сообщество охраны</strong><p>Вакансии · Объявления · Общение</p></div>
+  <article class="card">
+    <div class="pic">📝</div>
+    <div class="info">
+      <h2>Разместить объявление</h2>
+      <p>Информация о вакансии и условиях размещения.</p>
+    </div>
+    <a class="btn" href="https://max.ru/okhranaaa">Заполнить объявление →</a>
+  </article>
+
+  <article class="card">
+    <div class="pic">💬</div>
+    <div class="info">
+      <h2>Чат Охраны</h2>
+      <p>Общение, вопросы и актуальная информация.</p>
+    </div>
+    <a class="btn" href="https://max.ru/join/emKU42X8JSddfjDshkXL4VVNhcUz12JL2IsI6R8QtNE">Перейти в чат →</a>
+  </article>
+
+  <article class="card">
+    <div class="pic">📣</div>
+    <div class="info">
+      <h2>Канал MAX</h2>
+      <p>Объявления и предложения работы.</p>
+    </div>
+    <a class="btn" href="https://max.ru/oxranamosk">Перейти в канал →</a>
+  </article>
 </section>
-<footer>Охрана · Вакансии и объявления</footer>
+
+<footer class="bottom">
+  <div class="maxlogo"><span>●</span>MAX</div>
+  <div class="bottom-text">
+    <strong>Профессиональное сообщество охраны</strong>
+    <p>Вакансии · Объявления · Общение</p>
+  </div>
+</footer>
+
+<footer>© Охрана · Сообщество MAX</footer>
+</div>
 </body>
 </html>
