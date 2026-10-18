@@ -1,190 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#3824e8">
+<meta name="theme-color" content="#3924ec">
 <title>Охрана — вакансии и объявления MAX</title>
-
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:#111333;
-  background:#f3f4ff;
-}
-.wrap{max-width:1500px;margin:auto;padding:18px}
-.top,.bottom{
-  background:linear-gradient(110deg,#3015b9,#4235ff 65%,#168df7);
-  color:white;border-radius:24px;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:18px 30px;gap:18px;
-}
-.brand{display:flex;align-items:center;gap:20px}
-.avatar{
-  width:82px;height:82px;border-radius:50%;
-  background:#fff;display:grid;place-items:center;
-  font-size:45px;flex-shrink:0;
-}
-.brand h2{font-size:34px;margin:0 0 6px}
-.brand p{font-size:21px;margin:0}
-.maxlogo{font-size:48px;font-weight:800;white-space:nowrap}
-.maxlogo span{display:inline-grid;place-items:center;
-  background:white;color:#4930ed;border-radius:50%;
-  width:65px;height:65px;margin-right:8px}
-.hero{
-  margin-top:12px;min-height:350px;border-radius:28px;
-  overflow:hidden;display:grid;grid-template-columns:1fr 1fr;
-  align-items:center;
-  background:linear-gradient(90deg,#f2f3ff 0%,#e9edff 55%,#b7d5ff 100%);
-}
-.hero-text{padding:35px 40px}
-.hero h1{font-size:clamp(42px,6vw,82px);margin:0 0 12px;letter-spacing:-2px}
-.hero p{font-size:clamp(19px,2.5vw,35px);line-height:1.25;margin:0}
-.features{display:flex;gap:12px;margin-top:25px;flex-wrap:wrap}
-.feature{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600}
-.feature b{background:#dedbff;color:#3824e8;border-radius:15px;
-  width:55px;height:55px;display:grid;place-items:center;font-size:27px}
-.hero-img{height:350px;overflow:hidden}
-.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 10px}
-.card{
-  background:white;border-radius:25px;padding:18px 22px;
-  display:grid;grid-template-columns:165px 1fr;
-  grid-template-rows:1fr auto;gap:10px 22px;
-  align-items:center;box-shadow:0 8px 25px #3020800d;
-  min-width:0;
-}
-.pic{
-  grid-row:1;grid-column:1;
-  height:105px;border-radius:20px;
-  background:#eeebff;display:grid;place-items:center;font-size:62px;
-}
-.info{grid-row:1;grid-column:2}
-.info h2{font-size:clamp(19px,2vw,27px);margin:0 0 7px}
-.info p{font-size:18px;line-height:1.3;color:#666784;margin:0}
-.btn{
-  grid-column:1/-1;display:block;text-align:center;
-  text-decoration:none;color:white;font-size:19px;font-weight:bold;
-  background:linear-gradient(100deg,#4535ff,#3920eb);
-  padding:13px 12px;border-radius:16px;
-  transition:filter .2s;
-}
-.btn:hover{filter:brightness(1.12)}
-.bottom{margin-top:12px;justify-content:flex-start;padding:18px 35px}
-.bottom .maxlogo{border-right:2px solid #ffffff99;padding-right:25px}
-.bottom-text strong{font-size:25px}
-.bottom-text p{font-size:19px;margin:6px 0 0}
-footer{text-align:center;color:#777;padding:18px;font-size:14px}
+:root{--blue:#3520e8;--ink:#111331;--muted:#666783;--lav:#f1f2ff}
+body{margin:0;background:var(--lav);font-family:Arial,Helvetica,sans-serif;color:var(--ink)}
+.page{max-width:1536px;margin:auto;padding:18px 3.4%}
+.top,.bottom{background:linear-gradient(105deg,#3014b5,#4234ff 72%,#168df4);color:#fff;border-radius:24px;display:flex;align-items:center;gap:22px;padding:14px 4%}
+.avatar{width:92px;height:92px;flex:0 0 92px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:49px}
+.brand{min-width:0}.brand h2{font-size:clamp(24px,3vw,44px);margin:0 0 3px}.brand p{font-size:clamp(14px,1.8vw,26px);margin:0}
+.maxlogo{margin-left:auto;display:flex;align-items:center;gap:12px;font-size:clamp(32px,4vw,58px);font-weight:800;white-space:nowrap}
+.maxbubble{display:inline-grid;place-items:center;width:clamp(48px,5vw,76px);height:clamp(48px,5vw,76px);border-radius:32% 42% 42% 42%;background:#fff;color:#3925eb;font-size:clamp(25px,3vw,44px);border:5px solid #19a9ff}
+.hero{margin-top:12px;min-height:350px;border-radius:28px;overflow:hidden;display:grid;grid-template-columns:1.02fr .98fr;background:linear-gradient(100deg,#f2f3ff,#dbe6ff)}
+.hero-copy{padding:28px 5%;align-self:center}.hero h1{font-size:clamp(48px,7vw,100px);letter-spacing:-3px;line-height:1;margin:0 0 14px}.hero-copy>p{font-size:clamp(20px,2.6vw,38px);line-height:1.2;margin:0}
+.features{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px}.feature{display:flex;align-items:center;gap:10px;font-size:clamp(12px,1.2vw,17px);font-weight:600}.feature b{width:62px;height:62px;display:grid;place-items:center;border-radius:17px;background:#dfddff;color:#3924e8;font-size:30px}
+.hero-photo{height:100%;min-height:350px;position:relative}.hero-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 10px}
+.card{background:#fff;border-radius:25px;padding:16px 22px;display:grid;grid-template-columns:185px minmax(0,1fr);grid-template-rows:minmax(95px,1fr) auto;gap:10px 22px;align-items:center;box-shadow:0 7px 24px #2720780d;min-width:0}
+.art{height:105px;border-radius:21px;background:#efedff;display:grid;place-items:center;font-size:62px}
+.info h2{font-size:clamp(20px,2vw,29px);line-height:1.12;margin:0 0 7px}.info p{font-size:clamp(15px,1.55vw,23px);line-height:1.25;color:var(--muted);margin:0}
+.btn{grid-column:1/-1;display:block;text-align:center;text-decoration:none;background:linear-gradient(100deg,#4536ff,#3920eb);color:white;border-radius:16px;padding:12px 10px;font-weight:700;font-size:clamp(15px,1.5vw,22px)}
+.btn:hover{filter:brightness(1.08)}
+.bottom{margin-top:12px;padding:15px 3%;min-height:105px}
+.bottom .maxlogo{margin:0;padding-right:25px;border-right:2px solid #ffffff9c}
+.bottom-text strong{font-size:clamp(17px,2vw,28px)}.bottom-text p{font-size:clamp(14px,1.5vw,21px);margin:5px 0 0}
+footer.note{text-align:center;padding:15px;color:#7a7894;font-size:12px}
 @media(max-width:650px){
- .wrap{padding:10px}
- .top{padding:12px 14px;border-radius:17px}
- .brand{gap:10px}.avatar{width:48px;height:48px;font-size:28px}
- .brand h2{font-size:22px}.brand p{font-size:12px}
- .maxlogo{font-size:25px}.maxlogo span{width:38px;height:38px;font-size:23px;margin-right:3px}
- .hero{grid-template-columns:1fr;min-height:0}
- .hero-text{padding:22px 20px 15px}
- .hero h1{font-size:42px}
- .hero p{font-size:21px}
- .features{gap:10px;margin-top:18px}
- .feature{font-size:11px;gap:5px}
- .feature b{width:36px;height:36px;font-size:19px;border-radius:10px}
- .hero-img{height:210px}
- .grid{gap:10px;margin:12px 0}
- .card{padding:11px;border-radius:18px;grid-template-columns:1fr;gap:9px}
- .pic{grid-row:auto;grid-column:auto;height:90px;font-size:48px}
- .info{grid-row:auto;grid-column:auto}
- .info h2{font-size:17px;line-height:1.2}
- .info p{font-size:14px}
- .btn{font-size:13px;padding:11px 5px;border-radius:12px}
- .bottom{padding:13px;gap:12px;border-radius:17px}
- .bottom .maxlogo{font-size:22px;padding-right:10px}
- .bottom .maxlogo span{width:32px;height:32px}
- .bottom-text strong{font-size:15px}
- .bottom-text p{font-size:12px;line-height:1.4}
+ .page{padding:9px}.top{padding:10px 12px;border-radius:16px;gap:8px}.avatar{width:48px;height:48px;flex-basis:48px;font-size:27px}.brand h2{font-size:21px}.brand p{font-size:11px}.maxlogo{font-size:23px;gap:5px}.maxbubble{width:34px;height:34px;border-width:3px;font-size:18px}
+ .hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:20px 18px 16px}.hero h1{font-size:45px;letter-spacing:-1px}.hero-copy>p{font-size:21px}.features{gap:9px;margin-top:17px}.feature{font-size:10px;gap:5px}.feature b{width:34px;height:34px;font-size:18px;border-radius:10px}.hero-photo{min-height:210px;height:210px}.cards{gap:9px;margin:10px 0}.card{grid-template-columns:1fr;grid-template-rows:auto auto auto;padding:10px;border-radius:17px;gap:8px}.art{height:76px;font-size:43px;border-radius:13px}.info h2{font-size:16px}.info p{font-size:13px}.btn{font-size:12px;padding:10px 4px;border-radius:11px}.bottom{padding:11px;gap:10px;border-radius:16px;min-height:0}.bottom .maxlogo{font-size:22px;padding-right:10px;gap:4px}.bottom .maxbubble{width:30px;height:30px;font-size:16px}.bottom-text strong{font-size:13px}.bottom-text p{font-size:11px;line-height:1.3}
 }
 </style>
 </head>
-
-<body>
-<div class="wrap">
-
+<body><div class="page">
 <header class="top">
-  <div class="brand">
-    <div class="avatar">🛡️</div>
-    <div>
-      <h2>Охрана</h2>
-      <p>Бот · Вакансии и объявления</p>
-    </div>
-  </div>
-  <div class="maxlogo"><span>●</span>MAX</div>
+  <div class="avatar">🛡️</div>
+  <div class="brand"><h2>Охрана</h2><p>Бот · Вакансии и объявления</p></div>
+  <div class="maxlogo"><span class="maxbubble">●</span>MAX</div>
 </header>
-
 <section class="hero">
-  <div class="hero-text">
+  <div class="hero-copy">
     <h1>Охрана</h1>
     <p>Вакансии и объявления<br>для специалистов охраны</p>
     <div class="features">
-      <div class="feature"><b>💼</b>Актуальные<br>вакансии</div>
-      <div class="feature"><b>👥</b>Работа и<br>общение</div>
-      <div class="feature"><b>▤</b>Надёжная<br>информация</div>
+      <div class="feature"><b>💼</b><span>Актуальные<br>вакансии</span></div>
+      <div class="feature"><b>👥</b><span>Работа и<br>общение</span></div>
+      <div class="feature"><b>▤</b><span>Надёжная<br>информация</span></div>
     </div>
   </div>
-  <div class="hero-img">
-    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=85"
-         alt="Специалист охраны">
-  </div>
+  <div class="hero-photo"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1100&q=85" alt="Специалист охраны"></div>
 </section>
-
-<section class="grid">
-  <article class="card">
-    <div class="pic">🔔</div>
-    <div class="info">
-      <h2>Новые вакансии</h2>
-      <p>Свежие предложения работы в сфере охраны.</p>
-    </div>
-    <a class="btn" href="https://max.ru/okhranaaa">Перейти к вакансиям →</a>
-  </article>
-
-  <article class="card">
-    <div class="pic">📝</div>
-    <div class="info">
-      <h2>Разместить объявление</h2>
-      <p>Информация о вакансии и условиях размещения.</p>
-    </div>
-    <a class="btn" href="https://max.ru/okhranaaa">Заполнить объявление →</a>
-  </article>
-
-  <article class="card">
-    <div class="pic">💬</div>
-    <div class="info">
-      <h2>Чат Охраны</h2>
-      <p>Общение, вопросы и актуальная информация.</p>
-    </div>
-    <a class="btn" href="https://max.ru/join/emKU42X8JSddfjDshkXL4VVNhcUz12JL2IsI6R8QtNE">Перейти в чат →</a>
-  </article>
-
-  <article class="card">
-    <div class="pic">📣</div>
-    <div class="info">
-      <h2>Канал MAX</h2>
-      <p>Объявления и предложения работы.</p>
-    </div>
-    <a class="btn" href="https://max.ru/oxranamosk">Перейти в канал →</a>
-  </article>
+<section class="cards">
+ <article class="card"><div class="art">🔔</div><div class="info"><h2>Новые вакансии</h2><p>Свежие предложения работы<br>в сфере охраны.</p></div><a class="btn" href="https://max.ru/okhranaaa">Перейти к вакансиям →</a></article>
+ <article class="card"><div class="art">📝</div><div class="info"><h2>Разместить объявление</h2><p>Заполните информацию о вакансии и ознакомьтесь с условиями.</p></div><a class="btn" href="https://max.ru/okhranaaa">Заполнить объявление →</a></article>
+ <article class="card"><div class="art">💬</div><div class="info"><h2>Чат Охраны</h2><p>Общение, вопросы и актуальная информация.</p></div><a class="btn" href="https://max.ru/join/emKU42X8JSddfjDshkXL4VVNhcUz12JL2IsI6R8QtNE">Перейти в чат →</a></article>
+ <article class="card"><div class="art">📣</div><div class="info"><h2>Канал MAX</h2><p>Охрана Вакансии — объявления и предложения работы.</p></div><a class="btn" href="https://max.ru/oxranamosk">Перейти в канал →</a></article>
 </section>
-
 <footer class="bottom">
-  <div class="maxlogo"><span>●</span>MAX</div>
-  <div class="bottom-text">
-    <strong>Профессиональное сообщество охраны</strong>
-    <p>Вакансии · Объявления · Общение</p>
-  </div>
+ <div class="maxlogo"><span class="maxbubble">●</span>MAX</div>
+ <div class="bottom-text"><strong>Профессиональное сообщество охраны</strong><p>Вакансии · Объявления · Общение</p></div>
 </footer>
-
-<footer>© Охрана · Сообщество MAX</footer>
-</div>
-</body>
-</html>
+<footer class="note">Охрана · Сообщество MAX</footer>
+</div></body></html>
