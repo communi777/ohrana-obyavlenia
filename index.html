@@ -1,21 +1,16 @@
-@media(max-width:360px){.hero{padding:17px 12px;min-height:170px}.hero h1{font-size:29px}.hero p{font-size:12px}.features{gap:3px;max-width:85%}.feature{font-size:9px}.feature b{font-size:13px;padding:4px}.card{padding:9px 7px}.card h2{font-size:14px}.desc{font-size:11px}.btn{font-size:10px}.max-logo{width:70px}.max-logo-bottom{width:72px;height:42px}}
-</style>
-</head>
-<body>
-<div class="topbar">
-  <div class="shield">🛡️</div>
+<div class="logo">🛡️</div>
   <div><div class="botname">Охрана</div><div class="botsub">Бот · Вакансии и объявления</div></div>
-  <img class="max-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/MAX_messenger_logo.svg/256px-MAX_messenger_logo.svg.png" alt="MAX" onerror="this.style.display='none'">
+  <div class="maxmark">● MAX</div>
 </div>
 
 <section class="hero">
-  <img class="guard-photo" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80" alt="Специалист охраны">
+  <div class="shield-art">🛡️</div>
   <h1>Охрана</h1>
   <p>Вакансии и объявления для специалистов охраны</p>
   <div class="features">
     <div class="feature"><b>💼</b><span>Актуальные вакансии</span></div>
     <div class="feature"><b>👥</b><span>Работа и общение</span></div>
-    <div class="feature"><b>🛡️</b><span>Надёжная информация</span></div>
+    <div class="feature"><b>🛡️</b><span>Полезная информация</span></div>
   </div>
 </section>
 
@@ -26,18 +21,21 @@
     <p class="desc">Свежие предложения работы в сфере охраны.</p>
     <a class="btn" href="https://max.ru/okhranaaa">Перейти к вакансиям →</a>
   </section>
+
   <section class="card">
     <div class="art">📝</div>
     <h2>Разместить объявление</h2>
     <p class="desc">Заполните информацию о вакансии и ознакомьтесь с условиями.</p>
     <button class="btn" onclick="document.getElementById('form').showModal()">Заполнить объявление →</button>
   </section>
+
   <section class="card">
     <div class="art">💬</div>
     <h2>Чат Охраны</h2>
     <p class="desc">Общение, вопросы и актуальная информация.</p>
     <a class="btn" href="https://max.ru/join/emKU42X8JSddfjDshkXL4VVNhcUz12JL2IsI6R8QtNE" target="_blank" rel="noopener">Перейти в чат →</a>
   </section>
+
   <section class="card">
     <div class="art">📢</div>
     <h2>Канал MAX</h2>
@@ -47,7 +45,7 @@
 </main>
 
 <div class="bottom-banner">
-  <img class="max-logo-bottom" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/MAX_messenger_logo.svg/256px-MAX_messenger_logo.svg.png" alt="MAX" onerror="this.style.display='none'">
+  <div class="max-icon">●</div>
   <div><strong>Профессиональное сообщество охраны</strong><p>Вакансии · Объявления · Общение</p></div>
 </div>
 <footer>Охрана · Вакансии и объявления</footer>
@@ -72,13 +70,14 @@
 </dialog>
 <dialog id="terms">
   <h2>Условия размещения</h2>
-  <p class="note">Форма пока не подключена к отправке. Данные не сохранены.</p>
+  <p class="note">Форма пока не подключена к отправке. Данные не сохранены. Для настоящего размещения нужно подключить обработчик формы.</p>
   <button class="btn" onclick="document.getElementById('terms').close()">Понятно</button>
 </dialog>
 <script>
 document.getElementById('vacancyForm').addEventListener('submit',function(e){
   e.preventDefault();
-  document.getElementById('form').close();document.getElementById('terms').showModal();
+  document.getElementById('form').close();
+  document.getElementById('terms').showModal();
 });
 </script>
 </body>
